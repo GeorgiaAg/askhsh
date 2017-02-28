@@ -1,0 +1,41 @@
+def movezeros(List1):
+    
+    if len(List1)==0:
+        return aList  
+    
+    fin = len(List1)
+    mhden0 = 0 # o arithmos twn 0 sth lista pou dinei o xrhsths
+    y = 0
+    turns = 0
+    while(y<fin):
+        
+        if(List1[y]==0):
+            turns = y if y<turns else turns
+            mhden0 += 1
+
+        if(List1[y]!=0):
+            List1[turns] = List1[y] #an to stoixeio ths listas einai diaforo tou 0 to afhnw sth thesi tou
+            turns += 1
+
+        y +=1
+    
+    for h in range(fin-mhden0, fin):
+        List1[h] = 0
+
+    return List1
+
+if __name__ == '__main__':
+    print "Enter numbers continuously and then press the key 'Enter' in order to move the zeros at the end of the line.To move the zeros press any other key."
+    List2 = []
+    temp = True
+    while temp:
+        try:
+            x = float(raw_input())
+            List2.append(x)
+        except ValueError:
+            temp = False
+    List1 = movezeros(List2)
+    print List1
+    
+    
+    
