@@ -1,4 +1,0 @@
-choice= raw_input("Type an igredient: ")
-url = "http://food2fork.com/api/search?key={API_KEY}&q=shredded%20chicken"
-fchoice= url.replace('http://food2fork.com/api/search?key={API_KEY}&q=shredded%20chicken' , 'http://food2fork.com/api/search?key={API_KEY}&q=shredded%20' , choice)
-print fchoice
