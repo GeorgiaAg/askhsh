@@ -1,0 +1,11 @@
+print "Welcome user! This is a program which erases exclamation marks where not needed"
+
+sent= raw_input ("Please type your sentence below: ") #h protash
+
+sums=sent.count("!")-1 #metraw ta ! ths protashs kai afairw ena
+
+sent = sent.replace('!','',sums) #antikathistw ola ta thaumastika me keno ektos apo to teleutaio
+
+print sent #tupwnw thn nea protash
+
+raw_input("Press any of the buttons to exit ")
